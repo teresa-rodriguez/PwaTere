@@ -64,10 +64,12 @@ function sendPedido(element) {
         body: JSON.stringify(element) // body data type must match "Content-Type" header
       }).then(response => response.json())
       .then(data => {
+      alert("Tu pedido ha sido enviado");
       
       })
       .catch(function(err) {
         db2.pedido.bulkPut([element]);
+       alert("Tu pedido se registro offline se sincronizara cuando estes de nuevo en linea")
       })
 }
 
